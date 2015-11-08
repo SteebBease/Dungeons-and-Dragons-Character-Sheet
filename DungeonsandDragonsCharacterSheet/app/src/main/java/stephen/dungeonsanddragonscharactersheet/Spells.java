@@ -294,7 +294,7 @@ public class Spells extends MenuAndDatabase {
                         spellDescription.setText(spellCursor.getString(spellCursor.getColumnIndex(SQLHelper.SPELL_DESCRIPTION)));
 
                         //sets the custom dialog view up so that you only see what's relevant
-                        if (groupPosition == 0){
+                        if ("ability".equals(spellLevel.getText().toString())){
                             spellLevel.setVisibility(View.GONE);
                             spellSchool.setVisibility(View.GONE);
                             spellCastingTime.setVisibility(View.GONE);
@@ -680,7 +680,7 @@ public class Spells extends MenuAndDatabase {
                 spellRange.setVisibility(View.VISIBLE);
                 spellDuration.setVisibility(View.VISIBLE);
 
-                if (groupPosition == 0){
+                if ("ability".equals(spellLevel.getText().toString())){
                     spellPrepared.setVisibility(View.GONE);
                     spellLevel.setVisibility(View.GONE);
                     spellSchool.setVisibility(View.GONE);
