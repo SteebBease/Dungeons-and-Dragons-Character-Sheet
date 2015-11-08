@@ -36,6 +36,7 @@ import java.util.Random;
 
 public class BasicStats extends MenuAndDatabase{
 
+    //test
     //Constructor for the activity. This populates various textviews on the page
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
