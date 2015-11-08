@@ -75,20 +75,27 @@ public class CharacterSelectionScreen extends Activity {
         sqlhelper.onUpgrade(db,5,6);*/
 
         //Creates database
-//            sqlhelper.onCreate(db);
+        SQLHelper sqlhelper = new SQLHelper(this);
+        SQLiteDatabase db = sqlhelper.getWritableDatabase();
+        sqlhelper.onCreate(db);
 
         //displays the database version
         //TextView databaseVersionDisplay = (TextView) findViewById(R.id.title_character);
         //databaseVersionDisplay.setText(databaseVersionDisplay.getText().toString() + System.getProperty("line.separator") + SQLHelper.VERSION);
 
         //puts the data into the arrays
-        Cursor characterLoadCursor = SQLHelper.setupDatabase(this,SQLHelper.TABLE_NAME,null,null,null);
+        Cursor characterLoadCursor = null;
+        try {
+            characterLoadCursor = SQLHelper.setupDatabase(this, SQLHelper.TABLE_NAME, null, null, null);
+        }
+        catch(Exception e){}
 
         //sets the listview
         characterListView = (ListView) findViewById(R.id.listviewCharacterSelect);
 
         //populates the arrays from the listview
-        if (characterLoadCursor.getCount()>0){
+        if ((characterLoadCursor != null) &&
+                (characterLoadCursor.getCount()>0)){
             do {
                 characterIDList.add(characterLoadCursor.getString(characterLoadCursor.getColumnIndex(SQLHelper.C_ID)));
                 characterNameList.add(characterLoadCursor.getString(characterLoadCursor.getColumnIndex(SQLHelper.CHARACTER_NAME)));
@@ -101,7 +108,9 @@ public class CharacterSelectionScreen extends Activity {
         //sets the listview adapter
         characterListView.setAdapter(characterLoadAdapter);
 
-        characterLoadCursor.close();
+        if (characterLoadCursor != null) {
+            characterLoadCursor.close();
+        }
 
         Button addCharacter = (Button) findViewById(R.id.button_new_character);
         addCharacter.setOnClickListener(new View.OnClickListener() {
