@@ -414,7 +414,15 @@ public class SQLHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db){
-
+        try {
+            db.execSQL(createDB);
+            db.execSQL(createDBWeapons);
+            db.execSQL(createdDBSpells);
+            db.execSQL(createSettings);
+        }
+        catch (Exception e){
+            Log.e("SQLHelper","error creating database tables");
+        }
     }
 
     @Override

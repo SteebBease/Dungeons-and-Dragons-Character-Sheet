@@ -75,9 +75,9 @@ public class CharacterSelectionScreen extends Activity {
         sqlhelper.onUpgrade(db,5,6);*/
 
         //Creates database
-        SQLHelper sqlhelper = new SQLHelper(this);
-        SQLiteDatabase db = sqlhelper.getWritableDatabase();
-        sqlhelper.onCreate(db);
+        //SQLHelper sqlhelper = new SQLHelper(this);
+        //SQLiteDatabase db = sqlhelper.getWritableDatabase();
+        //sqlhelper.onCreate(db);
 
         //displays the database version
         //TextView databaseVersionDisplay = (TextView) findViewById(R.id.title_character);
@@ -88,7 +88,9 @@ public class CharacterSelectionScreen extends Activity {
         try {
             characterLoadCursor = SQLHelper.setupDatabase(this, SQLHelper.TABLE_NAME, null, null, null);
         }
-        catch(Exception e){}
+        catch(Exception e){
+            Log.e(e.toString(),"e");
+        }
 
         //sets the listview
         characterListView = (ListView) findViewById(R.id.listviewCharacterSelect);
