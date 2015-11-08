@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/basic_stats_headers"
+            android:text="Strength"
+            android:id="@+id/header"/>
+        <TextView
+            style="@style/basic_stats_attributes"
+            android:text="15"
+            android:id="@+id/attribute"/>
+        <TextView
+            style="@style/basic_stats_modifier"
+            android:text="+5"
+            android:id="@+id/modifier"/>
+        <TextView
+            style="@style/basic_stats_saving"
+            android:text="+7"
+            android:id="@+id/saving"/>
+    </LinearLayout>
+</LinearLayout>

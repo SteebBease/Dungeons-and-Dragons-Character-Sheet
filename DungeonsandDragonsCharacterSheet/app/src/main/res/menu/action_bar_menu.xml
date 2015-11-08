@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".BasicStats">
+    <item android:id="@+id/basic_stats" android:title="@string/basic_stats"
+        app:showAsAction="ifRoom" android:orderInCategory="1"
+        android:icon="@drawable/basicstats"/>
+    <item android:id="@+id/spells" android:title="@string/spells"
+        app:showAsAction="ifRoom" android:orderInCategory="2"
+        android:icon="@drawable/spells"/>
+    <item android:id="@+id/inventory" android:title="@string/inventory"
+        app:showAsAction="ifRoom" android:orderInCategory="3"
+        android:icon="@drawable/inventory"/>
+    <item android:id="@+id/backstory" android:title="@string/backstory"
+        app:showAsAction="ifRoom" android:orderInCategory="4"
+        android:icon="@drawable/background"/>
+    <item android:id="@+id/changecharacter" android:title="@string/changechar"
+        app:showAsAction="ifRoom" android:orderInCategory="5"
+        android:icon="@drawable/skills"/>
+    <item android:id="@+id/setting" android:title="@string/setting"
+        app:showAsAction="never" android:orderInCategory="100"/>
+</menu>

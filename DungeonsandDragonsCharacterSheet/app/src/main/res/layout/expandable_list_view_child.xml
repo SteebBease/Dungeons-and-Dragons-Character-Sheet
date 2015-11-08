@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp">
+        <TextView
+            style="@style/inventory_expanded_list_child_Name"
+            android:id="@+id/expandableItemTextViewName"
+            android:text="Weapon Name"/>
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewCost"
+            android:text="Cost"/>
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewWeight"
+            android:text="Weight"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:id="@+id/expandableItemWeaponRow">
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewRange"
+            android:gravity="center"
+            android:text="Range"/>
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewDamageType"
+            android:gravity="center"
+            android:text="Damage Type"/>
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewAttackAttribute"
+            android:gravity="center"
+            android:text="Atk Attribute"/>
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewDamageRoll"
+            android:gravity="center"
+            android:text="Roll"/>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="4dp">
+        <TextView
+            style="@style/inventory_expanded_list_child_other"
+            android:id="@+id/expandableItemTextViewAC"
+            android:text="AC"/>
+        <TextView
+            style="@style/inventory_expanded_list_child_description"
+            android:id="@+id/expandableItemTextViewDescription"
+            android:text="Description"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#000000" />
+</LinearLayout>

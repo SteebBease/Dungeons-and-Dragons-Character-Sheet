@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Character Sheet</string>
+
+    <!--Menu strings-->
+    <string name="basic_stats">Basic Stats</string>
+    <string name="spells">Spells</string>
+    <string name="inventory">Inventory</string>
+    <string name="backstory">Backstory</string>
+    <string name="changechar">Change Character</string>
+    <string name="setting">Settings</string>
+
+    <!--Character Selection Screen-->
+    <string name="char_selection_screen_new_character">New Character</string>
+    <string name="char_selection_screen_instructions">Create a new character by pressing the button,
+            select your character from below to play them. Long press a character to edit or delete them.</string>
+
+    <!--New Character Screen-->
+    <string name="new_char_screen_save_button">Save Character</string>
+    <string name="new_char_screen_delete_char">Delete Character</string>
+    <string name="new_char_screen_update_char">Update Character</string>
+
+    <string name="new_char_screen_char_name">Character Name</string>
+    <string name="new_char_screen_hp">HP</string>
+    <string name="new_char_screen_initiative">Init Bonus</string>
+    <string name="new_char_screen_speed">Speed</string>
+    <string name="new_char_screen_strength">Strength</string>
+    <string name="new_char_screen_dexterity">Dexterity</string>
+    <string name="new_char_screen_constitution">Constitution</string>
+    <string name="new_char_screen_intelligence">Intelligence</string>
+    <string name="new_char_screen_wisdom">Wisdom</string>
+    <string name="new_char_screen_charisma">Charisma</string>
+    <string name="new_char_screen_class_levels">Class Levels</string>
+    <string name="new_char_screen_barbarian">Barbarian</string>
+    <string name="new_char_screen_bard">Bard</string>
+    <string name="new_char_screen_cleric">Cleric</string>
+    <string name="new_char_screen_druid">Druid</string>
+    <string name="new_char_screen_fighter">Fighter</string>
+    <string name="new_char_screen_monk">Monk</string>
+    <string name="new_char_screen_paladin">Paladin</string>
+    <string name="new_char_screen_ranger">Ranger</string>
+    <string name="new_char_screen_rogue">Rogue</string>
+    <string name="new_char_screen_sorcerer">Sorcerer</string>
+    <string name="new_char_screen_warlock">Warlock</string>
+    <string name="new_char_screen_wizard">Wizard</string>
+    <string name="new_char_screen_saving_throw_proficiencies">Saving Throw Proficiency\s</string>
+    <string name="new_char_screen_skill_proficiencies">Skill Proficiency\'s</string>
+    <string name="new_char_screen_skill_acrobatics">Acrobatics</string>
+    <string name="new_char_screen_skill_animal_handling">Animal Handling</string>
+    <string name="new_char_screen_skill_arcana">Arcana</string>
+    <string name="new_char_screen_skill_athletics">Athletics</string>
+    <string name="new_char_screen_skill_deception">Deception</string>
+    <string name="new_char_screen_skill_history">History</string>
+    <string name="new_char_screen_skill_insight">Insight</string>
+    <string name="new_char_screen_skill_intimidation">Intimidation</string>
+    <string name="new_char_screen_skill_investigation">Investigation</string>
+    <string name="new_char_screen_skill_medicine">Medicine</string>
+    <string name="new_char_screen_skill_nature">Nature</string>
+    <string name="new_char_screen_skill_perception">Perception</string>
+    <string name="new_char_screen_skill_performance">Performance</string>
+    <string name="new_char_screen_skill_persuasion">Persuasion</string>
+    <string name="new_char_screen_skill_religion">Religion</string>
+    <string name="new_char_screen_skill_slight_of_hand">Slight Of Hand</string>
+    <string name="new_char_screen_skill_stealth">Stealth</string>
+    <string name="new_char_screen_skill_survival">survival</string>
+    <string name="new_char_screen_weapon_proficiencies">Weapon Proficiency\'s</string>
+    <string name="new_char_screen_armor_proficiencies">Armor Proficiency\'s</string>
+    <string name="new_char_screen_tool_proficiencies">Tool Proficiency\'s</string>
+    <string name="new_char_screen_language_proficiencies">Language Proficiency\'s</string>
+    <string name="new_char_screen_race">Race</string>
+    <string name="new_char_screen_alignment">Alignment</string>
+    <string name="new_char_screen_eye_color">Eye Color</string>
+    <string name="new_char_screen_skin_color">Skin Color</string>
+    <string name="new_char_screen_hair_color">Hair Color</string>
+    <string name="new_char_screen_age">Age</string>
+    <string name="new_char_screen_height">Height</string>
+    <string name="new_char_screen_weight">Weight</string>
+    <string name="new_char_screen_allies_and_organisations">Allies And Organisations</string>
+    <string name="new_char_screen_background">Background</string>
+    <string name="new_char_screen_backstory">Backstory</string>
+    <string name="new_char_screen_personality_traits">Personality Traits</string>
+    <string name="new_char_screen_ideals">Ideals</string>
+    <string name="new_char_screen_bonds">Bonds</string>
+    <string name="new_char_screen_flaws">Flaws</string>
+
+    <!--Basic stats-->
+    <string name="basic_stats_attribute">Attribute</string>
+    <string name="basic_stats_modifier">Modifier</string>
+    <string name="basic_stats_saving">Saving</string>
+    <string name="basic_stats_dice_rolls">Dice Rolls</string>
+    <string name="basic_stats_d4">d4</string>
+    <string name="basic_stats_d6">d6</string>
+    <string name="basic_stats_d8">d8</string>
+    <string name="basic_stats_d10">d10</string>
+    <string name="basic_stats_d20">d20</string>
+    <string name="basic_stats_d100">d100</string>
+    <string name="basic_stats_acrobatics">Acrobatics</string>
+    <string name="basic_stats_animal_handling">Animal Handling</string>
+    <string name="basic_stats_arcana">Arcana</string>
+    <string name="basic_stats_athletics">Athletics</string>
+    <string name="basic_stats_deception">Deception</string>
+    <string name="basic_stats_history">History</string>
+    <string name="basic_stats_insight">Insight</string>
+    <string name="basic_stats_intimidation">Intimidation</string>
+    <string name="basic_stats_investigation">Investigation</string>
+    <string name="basic_stats_medicine">Medicine</string>
+    <string name="basic_stats_nature">Nature</string>
+    <string name="basic_stats_perception">Perception</string>
+    <string name="basic_stats_performance">Performance</string>
+    <string name="basic_stats_persuasion">Persuasion</string>
+    <string name="basic_stats_religion">Religion</string>
+    <string name="basic_stats_slight_of_hand">Slight Of Hand</string>
+    <string name="basic_stats_stealth">Stealth</string>
+    <string name="basic_stats_survival">Survival</string>
+    <string name="basic_stats_experience">XP</string>
+    <string name="HP_dialog_D6">D6</string>
+    <string name="HP_dialog_D8">D8</string>
+    <string name="HP_dialog_D10">D10</string>
+    <string name="HP_dialog_D12">D12</string>
+    <string name="HP_hit_dice">Hit Dice</string>
+
+    <!--inventory-->
+    <string name="inventory_weapons">Weapons</string>
+    <string name="inventory_armor">Armor</string>
+    <string name="inventory_general_inventory">General Inventory</string>
+    <string name="inventory_speed">Speed</string>
+    <string name="inventory_initiative">Initiative</string>
+    <string name="inventory_proficiency">Proficiencies</string>
+    <string name="inventory_armor_class">Armor Class</string>
+    <string name="inventory_money_pp">PP</string>
+    <string name="inventory_money_gp">GP</string>
+    <string name="inventory_money_ep">EP</string>
+    <string name="inventory_money_sp">SP</string>
+    <string name="inventory_money_cp">CP</string>
+
+    <!--item add dialog-->
+    <string name="item_name_hint">Name</string>
+    <string name="item_description_hint">Description</string>
+    <string name="item_range">Range</string>
+    <string name="item_damage_type">Damage Type</string>
+    <string name="item_damage_roll">Damage Roll</string>
+    <string name="item_ac">AC</string>
+    <string name="item_weight">Weight</string>
+    <string name="item_cost">Cost</string>
+    <string name="item_add_weapon">Weapon</string>
+    <string name="item_add_armor">Armor</string>
+    <string name="item_add_item">Item</string>
+    <string name="item_add_strength">Strength</string>
+    <string name="item_add_dexterity">Dexterity</string>
+    <string name="item_add_proficient">Proficient</string>
+
+    <!--spells-->
+    <string name="spell_spellcasting">Spell Casting</string>
+    <string name="spell_spellcasting_slots">Spell Casting Spell Slots</string>
+    <string name="spell_level_1">Level 1</string>
+    <string name="spell_level_2">Level 2</string>
+    <string name="spell_level_3">Level 3</string>
+    <string name="spell_level_4">Level 4</string>
+    <string name="spell_level_5">Level 5</string>
+    <string name="spell_level_6">Level 6</string>
+    <string name="spell_level_7">Level 7</string>
+    <string name="spell_level_8">Level 8</string>
+    <string name="spell_level_9">Level 9</string>
+    <string name="spell_reset">Reset</string>
+    <string name="spell_casting_ability">Casting Ability</string>
+    <string name="spell_save_dc">Save DC</string>
+    <string name="spell_attack_bonus">Attack Bonus</string>
+
+    <!--Dice Dialog-->
+    <string name="dice_heading">Dice Rolls</string>
+    <string name="dice_d4">d4</string>
+    <string name="dice_d6">d6</string>
+    <string name="dice_d8">d8</string>
+    <string name="dice_d10">d10</string>
+    <string name="dice_d12">d12</string>
+    <string name="dice_d20">d20</string>
+    <string name="dice_d50">d50</string>
+    <string name="dice_d100">d100</string>
+
+    <!--Import Export-->
+    <string name="ie_spinner_title_export">Character Export</string>
+    <string name="ie_export">Export</string>
+    <string name="ie_export_text">Note: when exporting it will overwrite any existing files.</string>
+    <string name="ie_spinner_title_import">Character Import</string>
+    <string name="ie_import">Import</string>
+</resources>

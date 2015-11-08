@@ -1,0 +1,512 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".NewCharacterScreen"
+    android:orientation="vertical"
+    android:background="@drawable/backrepeat">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--Character Name-->
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:inputType="textCapWords"
+                android:hint="@string/new_char_screen_char_name"
+                android:id="@+id/new_char_char_name"/>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>            <!--HP, Speed Layout-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--HP-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_hp"
+                    android:id="@+id/new_char_hp"/>
+                <!--initiative-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_initiative"
+                    android:id="@+id/new_char_initiative"/>
+                <!--Speed-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_speed"
+                    android:id="@+id/new_char_speed"/>
+            </LinearLayout>
+            <!--Strength, Dexterity, Constitution-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--Strength-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_strength"
+                    android:id="@+id/new_char_strength"/>
+                <!--Dexterity-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_dexterity"
+                    android:id="@+id/new_char_dexterity"/>
+                <!--Constitution-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_constitution"
+                    android:id="@+id/new_char_constitution"/>
+            </LinearLayout>
+            <!--Intelligence, wisdon, charisma-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--Intelligence-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_intelligence"
+                    android:id="@+id/new_char_intelligence"/>
+                <!--wisdom-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_wisdom"
+                    android:id="@+id/new_char_wisdom"/>
+                <!--charisma-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_charisma"
+                    android:id="@+id/new_char_charisma"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--Class Levels-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_char_screen_class_levels"
+                android:gravity="center"/>
+            <!--class levels. barbarian, bard, cleric-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--barbarian-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_barbarian"
+                    android:id="@+id/new_char_barbarian"/>
+                <!--bard-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_bard"
+                    android:id="@+id/new_char_bard"/>
+                <!--cleric-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_cleric"
+                    android:id="@+id/new_char_cleric"/>
+            </LinearLayout>
+            <!--class levels. druid, fighter, monk-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--druid-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_druid"
+                    android:id="@+id/new_char_druid"/>
+                <!--fighter-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_fighter"
+                    android:id="@+id/new_char_fighter"/>
+                <!--monk-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_monk"
+                    android:id="@+id/new_char_monk"/>
+            </LinearLayout>
+            <!--class levels. paladin, ranger, rogue-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--paladin-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_paladin"
+                    android:id="@+id/new_char_paladin"/>
+                <!--ranger-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_ranger"
+                    android:id="@+id/new_char_ranger"/>
+                <!--rogue-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_rogue"
+                    android:id="@+id/new_char_rogue"/>
+            </LinearLayout>
+            <!--class levels. sorcerer, warlock, wizard-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--sorcerer-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_sorcerer"
+                    android:id="@+id/new_char_sorcerer"/>
+                <!--warlock-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_warlock"
+                    android:id="@+id/new_char_warlock"/>
+                <!--wizard-->
+                <EditText
+                    style="@style/Edit_Text_Number_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_wizard"
+                    android:id="@+id/new_char_wizard"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--Saving Throw Proficiences-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_char_screen_saving_throw_proficiencies"
+                android:gravity="center"/>
+            <!--saving throw proficiencies strength, dexterity, constitution-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--strength-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_strength"
+                    android:id="@+id/new_char_saving_throw_strength"/>
+                <!--dexterity-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_dexterity"
+                    android:id="@+id/new_char_saving_throw_dexterity"/>
+                <!--constitution-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_constitution"
+                    android:id="@+id/new_char_saving_throw_constitution"/>
+            </LinearLayout>
+            <!--saving throw proficiencies intelligence, wisdom, charisma-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--intelligence-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_intelligence"
+                    android:id="@+id/new_char_saving_throw_intelligence"/>
+                <!--wisdom-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_wisdom"
+                    android:id="@+id/new_char_saving_throw_wisdom"/>
+                <!--charisma-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_charisma"
+                    android:id="@+id/new_char_saving_throw_charisma"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--skills acrobatics, animal handling, arcana-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_char_screen_skill_proficiencies"
+                android:gravity="center"/>
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--acrobatics-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_acrobatics"
+                    android:id="@+id/new_char_skill_acrobatics"/>
+                <!--animal handling-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_animal_handling"
+                    android:id="@+id/new_char_skill_animal_handling"/>
+                <!--arcana-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_arcana"
+                    android:id="@+id/new_char_skill_arcana"/>
+            </LinearLayout>
+            <!--Skill Proficiencies athletics, deception history-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--athletics-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_athletics"
+                    android:id="@+id/new_char_skill_athletics"/>
+                <!--deception-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_deception"
+                    android:id="@+id/new_char_skill_deception"/>
+                <!--history-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_history"
+                    android:id="@+id/new_char_skill_history"/>
+            </LinearLayout>
+            <!--Skill Proficiencies insight, intimidaiton, investigation-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--insight-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_insight"
+                    android:id="@+id/new_char_skill_insight"/>
+                <!--intimidaiton-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_intimidation"
+                    android:id="@+id/new_char_skill_intimidation"/>
+                <!--investigation-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_investigation"
+                    android:id="@+id/new_char_skill_investigation"/>
+            </LinearLayout>
+            <!--Skill Proficiencies medicine nature perception-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--medicine-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_medicine"
+                    android:id="@+id/new_char_skill_medicine"/>
+                <!--nature-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_nature"
+                    android:id="@+id/new_char_skill_nature"/>
+                <!--perception-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_perception"
+                    android:id="@+id/new_char_skill_perception"/>
+            </LinearLayout>
+            <!--Skill Proficiencies performance, persuasion, religion-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--performance-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_performance"
+                    android:id="@+id/new_char_skill_performance"/>
+                <!--persuasion-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_persuasion"
+                    android:id="@+id/new_char_skill_persuasion"/>
+                <!--religion-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_religion"
+                    android:id="@+id/new_char_skill_religion"/>
+            </LinearLayout>
+            <!--Skill Proficiencies slight of hand, stealth, survival-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--slight of hand-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_slight_of_hand"
+                    android:id="@+id/new_char_skill_slight_of_hand"/>
+                <!--stealth-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_stealth"
+                    android:id="@+id/new_char_skill_stealth"/>
+                <!--survival-->
+                <CheckBox
+                    style="@style/CheckBox_Horizontal"
+                    android:text="@string/new_char_screen_skill_survival"
+                    android:id="@+id/new_char_skill_survival"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>            <!--weapon proficiencies-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_weapon_proficiencies"
+                android:id="@+id/new_char_weapon_proficiencies"/>
+            <!--armor proficiencies-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_armor_proficiencies"
+                android:id="@+id/new_char_armor_proficiencies"/>
+            <!--tool proficiencies-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_tool_proficiencies"
+                android:id="@+id/new_char_tool_proficiencies"/>
+            <!--Language proficiencies-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_language_proficiencies"
+                android:id="@+id/new_char_language_proficiencies"/>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spell_spellcasting_slots"
+                android:gravity="center"/>
+            <LinearLayout
+                style="@style/Linear_Layout_Horizontal">
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_1"
+                    android:id="@+id/new_char_spell_L1"
+                    android:inputType="number"/>
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_2"
+                    android:id="@+id/new_char_spell_L2"
+                    android:inputType="number"/>
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_3"
+                    android:id="@+id/new_char_spell_L3"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/Linear_Layout_Horizontal">
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_4"
+                    android:id="@+id/new_char_spell_L4"
+                    android:inputType="number"/>
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_5"
+                    android:id="@+id/new_char_spell_L5"
+                    android:inputType="number"/>
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_6"
+                    android:id="@+id/new_char_spell_L6"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/Linear_Layout_Horizontal">
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_7"
+                    android:id="@+id/new_char_spell_L7"
+                    android:inputType="number"/>
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_8"
+                    android:id="@+id/new_char_spell_L8"
+                    android:inputType="number"/>
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/spell_level_9"
+                    android:id="@+id/new_char_spell_L9"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--character information race alignment-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--race-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_race"
+                    android:id="@+id/new_char_race"/>
+                <!--alignment-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_alignment"
+                    android:id="@+id/new_char_alignment"/>
+                <!--backgroudn-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_background"
+                    android:id="@+id/new_char_background"/>
+            </LinearLayout>
+            <!--character information eye, skin, hair-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--eye-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_eye_color"
+                    android:id="@+id/new_char_eye_color"/>
+                <!--skin-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_skin_color"
+                    android:id="@+id/new_char_skin_color"/>
+                <!--hair color-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_hair_color"
+                    android:id="@+id/new_char_hair_color"/>
+            </LinearLayout>
+            <!--character information age, height, weight-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--age-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_age"
+                    android:id="@+id/new_char_age"/>
+                <!--height-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_height"
+                    android:id="@+id/new_char_height"/>
+                <!--weight-->
+                <EditText
+                    style="@style/Edit_Text_Text_Entry_Horizontal"
+                    android:hint="@string/new_char_screen_weight"
+                    android:id="@+id/new_char_weight"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Add an Image"
+                android:onClick="chooseImage"/>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgView"
+                android:scaleType="centerInside"/>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--allies and organisations-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_allies_and_organisations"
+                android:id="@+id/new_char_allies_and_organisations"/>
+            <!--Personality-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_personality_traits"
+                android:id="@+id/new_char_personality"/>
+            <!--ideals-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_ideals"
+                android:id="@+id/new_char_ideals"/>
+            <!--backstory-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_bonds"
+                android:id="@+id/new_char_bonds"/>
+            <!--backstory-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_flaws"
+                android:id="@+id/new_char_flaws"/>
+            <!--backstory-->
+            <EditText
+                style="@style/Edit_Text_Text_Entry_Single_Width"
+                android:hint="@string/new_char_screen_backstory"
+                android:id="@+id/new_char_backstory"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

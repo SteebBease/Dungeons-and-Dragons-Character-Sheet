@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="stephen.dungeonsanddragonscharactersheet">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <activity
+            android:name=".CharacterSelectionScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BasicStats"
+            android:label="Basic Stats"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Inventory"
+            android:label="Inventory"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Spells"
+            android:label="Spells"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Backstory"
+            android:label="Backstory"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ImportExport"
+            android:label="ImportExport"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

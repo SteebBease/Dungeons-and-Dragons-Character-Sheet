@@ -1,0 +1,229 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Backstory"
+    android:orientation="vertical"
+    android:background="@drawable/backrepeat">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--linear layout for all-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+                    <!--Character Name-->
+                    <TextView
+                        style="@style/all_view_character_names"
+                        android:text="Character Name"
+                        android:id="@+id/character_name"/>
+                    <!--negative button-->
+                    <Button
+                        style="@style/all_view_hp_buttons"
+                        android:text="-"
+                        android:onClick="hpDown"
+                        android:textSize="15dp"
+                        android:clickable="true"/>
+                    <!--hp-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="120"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/character_hp"
+                        android:clickable="true"
+                        android:onClick="HPModify"/>
+                    <!--positive button-->
+                    <Button
+                        style="@style/all_view_hp_buttons"
+                        android:text="+"
+                        android:onClick="hpUp"
+                        android:textSize="15dp"
+                        android:clickable="true"/>
+                </LinearLayout>
+                <!--blank row-->
+                <TextView style="@style/Blank_Row"/>
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:id="@+id/backstory_image"
+                    android:clickable="true"
+                    android:onClick="imageRotation"/>
+                <!--blank row-->
+                <TextView style="@style/Blank_Row"/>
+
+            <!--race, alignment, background headers-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--race-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_race"/>
+                <!--alignment-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_alignment"/>
+                <!--background-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_background"/>
+            </LinearLayout>
+            <!--race, alignment, background data-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--race-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_race"
+                    android:id="@+id/backstory_race"/>
+                <!--alignment-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_alignment"
+                    android:id="@+id/backstory_alignment"/>
+                <!--background-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_background"
+                    android:id="@+id/backstory_background"/>
+            </LinearLayout>
+
+            <!--character information eye, skin, hair headers-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--eye-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_eye_color"/>
+                <!--skin-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_skin_color"/>
+                <!--hair color-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_hair_color"/>
+            </LinearLayout>
+            <!--character information eye, skin, hair data-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--eye-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_eye_color"
+                    android:id="@+id/backstory_eye_color"/>
+                <!--skin-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_skin_color"
+                    android:id="@+id/backstory_skin_color"/>
+                <!--hair color-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_hair_color"
+                    android:id="@+id/backstory_hair_color"/>
+            </LinearLayout>
+            <!--character information age, height, weight header-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--age-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_age"/>
+                <!--height-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_height"/>
+                <!--weight-->
+                <TextView
+                    style="@style/backstory_headers_multi"
+                    android:text="@string/new_char_screen_weight"/>
+            </LinearLayout>
+            <!--character information age, height, weight data-->
+            <LinearLayout style="@style/Linear_Layout_Horizontal">
+                <!--age-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_age"
+                    android:id="@+id/backstory_age"/>
+                <!--height-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_height"
+                    android:id="@+id/backstory_height"/>
+                <!--weight-->
+                <TextView
+                    style="@style/backstory_data_multi"
+                    android:text="@string/new_char_screen_weight"
+                    android:id="@+id/backstory_weight"/>
+            </LinearLayout>
+            <!--blank row-->
+            <TextView style="@style/Blank_Row"/>
+            <!--allies and organisations header-->
+            <TextView
+                style="@style/backstory_headers_single"
+                android:text="@string/new_char_screen_allies_and_organisations"/>
+            <!--allies and organisations data-->
+            <TextView
+                style="@style/backstory_data_single"
+                android:text="@string/new_char_screen_allies_and_organisations"
+                android:id="@+id/backstory_allies_and_organisations"/>
+            <!--personality traits header-->
+            <TextView
+                style="@style/backstory_headers_single"
+                android:text="@string/new_char_screen_personality_traits"/>
+            <!--personality traits data-->
+            <TextView
+                style="@style/backstory_data_single"
+                android:text="@string/new_char_screen_personality_traits"
+                android:id="@+id/backstory_personality_traits"/>
+            <!--ideals header-->
+            <TextView
+                style="@style/backstory_headers_single"
+                android:text="@string/new_char_screen_ideals"/>
+            <!--ideals data-->
+            <TextView
+                style="@style/backstory_data_single"
+                android:text="@string/new_char_screen_ideals"
+                android:id="@+id/backstory_ideals"/>
+            <!--bonds header-->
+            <TextView
+                style="@style/backstory_headers_single"
+                android:text="@string/new_char_screen_bonds"/>
+            <!--bonds data-->
+            <TextView
+                style="@style/backstory_data_single"
+                android:text="@string/new_char_screen_bonds"
+                android:id="@+id/backstory_bonds"/>
+            <!--flaws header-->
+            <TextView
+                style="@style/backstory_headers_single"
+                android:text="@string/new_char_screen_flaws"/>
+            <!--flaws data-->
+            <TextView
+                style="@style/backstory_data_single"
+                android:text="@string/new_char_screen_flaws"
+                android:id="@+id/backstory_flaws"/>
+            <!--backstory header-->
+            <TextView
+                style="@style/backstory_headers_single"
+                android:text="@string/new_char_screen_backstory"/>
+            <!--backstory data-->
+            <TextView
+                style="@style/backstory_data_single"
+                android:text="@string/new_char_screen_backstory"
+                android:id="@+id/backstory_backstory"/>
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>
