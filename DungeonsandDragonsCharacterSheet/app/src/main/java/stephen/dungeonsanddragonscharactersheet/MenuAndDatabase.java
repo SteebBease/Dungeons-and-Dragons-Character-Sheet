@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -84,7 +85,7 @@ public class MenuAndDatabase extends Activity implements OnGestureListener{
             default:
                 return super.onOptionsItemSelected(item);
         }
-        this.overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
+        this.overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
         return super.onOptionsItemSelected(item);
     }
 
@@ -107,10 +108,15 @@ public class MenuAndDatabase extends Activity implements OnGestureListener{
     }
 
     //calculates the modifer value as a string including the + or -
-    static String modifierCalculator(String attributeString, int proficiency,String proficient){
+    static String modifierCalculator(String attributeString, int proficiency, String proficient){
         int attribute = Integer.parseInt(attributeString);
         Double modCalcDbl = Math.floor((attribute- 10) / 2);
         int modCalc = modCalcDbl.intValue();
+
+        //check for a 9 attribute, this is incorrectly calculated with the above math. -1/2 returns 0
+        if(attribute == 9){
+            modCalc = -1;
+        }
         int areTheyProficient = Integer.parseInt(proficient);
         String returnValue;
         if (areTheyProficient == 1){
@@ -132,6 +138,12 @@ public class MenuAndDatabase extends Activity implements OnGestureListener{
         int attribute = Integer.parseInt(attributeString);
         Double modCalcDbl = Math.floor((attribute- 10) / 2);
         int modCalc = modCalcDbl.intValue();
+
+        //check for a 9 attribute, this is incorrectly calculated with the above math. -1/2 returns 0
+        if(attribute == 9){
+            modCalc = -1;
+        }
+
         int areTheyProficient = Integer.parseInt(proficient);
         if (areTheyProficient == 1){
             modCalc = modCalc + proficiency;
