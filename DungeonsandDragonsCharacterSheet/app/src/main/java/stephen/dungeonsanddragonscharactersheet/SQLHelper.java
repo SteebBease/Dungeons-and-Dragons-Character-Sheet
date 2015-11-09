@@ -408,6 +408,19 @@ public class SQLHelper extends SQLiteOpenHelper{
             + ")";
     public static final String CHARACTER_EXPERIENCE = "character_experience";
 
+    public static final String DICE_TABLE_NAME = "dice_table_name";
+    public static final String DICE_ID = "dice_id";
+    public static final String DICE_CHARACTER_ID = "dice_character_id";
+    public static final String DICE_DICE = "dice_dice";
+    public static final String DICE_ROLL_VALUE = "dice_roll_value";
+
+    final String createDice = "create table if not exists " + DICE_TABLE_NAME + " ( "
+            + DICE_ID + " integer primary key autoincrement, "
+            + DICE_CHARACTER_ID + " text, "
+            + DICE_DICE + " text, "
+            + DICE_ROLL_VALUE + " text "
+            + ")";
+
     public SQLHelper(Context context){
         super(context, DATABASE_NAME, null, VERSION);
     }
@@ -416,12 +429,33 @@ public class SQLHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db){
         try {
             db.execSQL(createDB);
+        }
+        catch (Exception e){
+            Log.e("SQLHelper","error creating character table");
+        }
+        try {
             db.execSQL(createDBWeapons);
+        }
+        catch (Exception e){
+            Log.e("SQLHelpher","error creating weapons table");
+        }
+        try {
             db.execSQL(createdDBSpells);
+        }
+        catch (Exception e){
+            Log.e("SQLHelper", "error creating spells table");
+        }
+        try {
             db.execSQL(createSettings);
         }
         catch (Exception e){
-            Log.e("SQLHelper","error creating database tables");
+            Log.e("SQLHelper", "error creating setting table");
+        }
+        try {
+            db.execSQL(createDice);
+        }
+        catch (Exception e){
+            Log.e("SQLHelper", "error creating dice table");
         }
     }
 
@@ -438,6 +472,9 @@ public class SQLHelper extends SQLiteOpenHelper{
         }catch (Exception e){Log.e("SQLHelper", "onupgrade error: " + e.toString());}
         try{
             db.execSQL("drop table " + SETTING_TABLE_NAME);
+        }catch (Exception e){Log.e("SQLHelper", "onupgrade error: " + e.toString());}
+        try{
+        db.execSQL("drop table " + DICE_TABLE_NAME);
         }catch (Exception e){Log.e("SQLHelper", "onupgrade error: " + e.toString());}
     }
 

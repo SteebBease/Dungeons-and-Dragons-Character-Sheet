@@ -65,8 +65,8 @@ public class CharacterSelectionScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection_screen);
 
-//        Button importButton = (Button) findViewById(R.id.button_export);
-//        importButton.setVisibility(View.GONE);
+        final Button importButton = (Button) findViewById(R.id.button_export);
+        importButton.setVisibility(View.GONE);
 
         //Database Admin
         //Upgrades database
@@ -82,6 +82,15 @@ public class CharacterSelectionScreen extends Activity {
         //displays the database version
         //TextView databaseVersionDisplay = (TextView) findViewById(R.id.title_character);
         //databaseVersionDisplay.setText(databaseVersionDisplay.getText().toString() + System.getProperty("line.separator") + SQLHelper.VERSION);
+
+        TextView titleText = (TextView) findViewById(R.id.title_character);
+        titleText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                importButton.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
 
         //puts the data into the arrays
         Cursor characterLoadCursor = null;

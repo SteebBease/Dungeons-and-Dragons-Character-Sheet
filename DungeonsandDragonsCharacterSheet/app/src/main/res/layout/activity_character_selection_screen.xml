@@ -20,7 +20,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Import/Export"
+        android:text="Import/Export (Experimental)"
         android:id="@+id/button_export"/>
     <Button
         android:layout_width="fill_parent"
