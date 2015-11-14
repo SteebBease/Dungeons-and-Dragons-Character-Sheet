@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Display;
 import android.view.GestureDetector;
@@ -62,6 +63,10 @@ public class Spells extends MenuAndDatabase {
     int screenHeight;
 
     public void onCreate(Bundle savedInstanceState) {
+        //sets the theme from settings
+        int chosenTheme = PreferenceManager.getDefaultSharedPreferences(this).getInt("theme",R.style.blue_grey_theme);
+        setTheme(chosenTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.spells);
 

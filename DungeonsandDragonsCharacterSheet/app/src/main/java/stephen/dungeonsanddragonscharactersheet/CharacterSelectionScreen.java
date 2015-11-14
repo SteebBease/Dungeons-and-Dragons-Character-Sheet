@@ -33,6 +33,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -62,6 +64,10 @@ public class CharacterSelectionScreen extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //sets the theme
+        int chosenTheme = PreferenceManager.getDefaultSharedPreferences(this).getInt("theme",R.style.blue_grey_theme);
+        setTheme(chosenTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection_screen);
 
@@ -157,6 +163,19 @@ public class CharacterSelectionScreen extends Activity {
                 Intent intentBasicStats = new Intent(CharacterSelectionScreen.this,ImportExport.class);
                 startActivity(intentBasicStats);
                 CharacterSelectionScreen.this.overridePendingTransition(0,0);
+            }
+        });
+
+        //sets the setting button onClick
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.button_settings);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentSettings = new Intent(CharacterSelectionScreen.this,Settings.class);
+                intentSettings.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intentSettings);
+                CharacterSelectionScreen.this.overridePendingTransition(0,0);
+
             }
         });
     }

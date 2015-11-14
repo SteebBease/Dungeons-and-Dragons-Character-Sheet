@@ -3,13 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".BasicStats"
-    android:orientation="vertical"
-    android:background="@drawable/backrepeat">
+    android:orientation="vertical">
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -23,19 +18,26 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:background="?attr/custom_primary_dark">
                 <!--Character Name-->
                 <TextView
                     style="@style/all_view_character_names"
                     android:text="Character Name"
-                    android:id="@+id/character_name"/>
+                    android:id="@+id/character_name"
+                    android:textColor="?attr/custom_icons"/>
                 <!--negative button-->
                 <Button
-                    style="@style/all_view_hp_buttons"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:text="-"
                     android:onClick="hpDown"
                     android:textSize="15dp"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:background="@drawable/button_round" />
                 <!--hp-->
                 <TextView
                     android:layout_width="0dp"
@@ -46,49 +48,65 @@
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:id="@+id/character_hp"
+                    android:onClick="HPModify"
                     android:clickable="true"
-                    android:onClick="HPModify"/>
+                    android:textColor="?attr/custom_icons"/>
                 <!--positive button-->
                 <Button
-                    style="@style/all_view_hp_buttons"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:text="+"
                     android:onClick="hpUp"
                     android:textSize="15dp"
-                    android:clickable="true"/>
-            </LinearLayout>            <!--blank row-->
-            <TextView style="@style/Blank_Row"/>
+                    android:clickable="true"
+                    android:background="@drawable/button_round"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?attr/custom_divider"/>
+
+
             <!--speed and initiative-->
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="?attr/custom_primary">
                 <!--initiative-->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/inventory_initiative"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textColor="?attr/custom_icons"/>
                 <!--armor class-->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/inventory_armor_class"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textColor="?attr/custom_icons"/>
                 <!--speed-->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/inventory_speed"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--speed and initiative-->
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="?attr/custom_primary">
                 <!--initiative-->
                 <TextView
                     android:layout_width="0dp"
@@ -96,7 +114,8 @@
                     android:layout_weight="1"
                     android:text=""
                     android:id="@+id/inventory_initiative"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textColor="?attr/custom_icons"/>
                 <!--armor class-->
                 <TextView
                     android:layout_width="0dp"
@@ -104,7 +123,8 @@
                     android:layout_weight="1"
                     android:text="25ft"
                     android:id="@+id/inventory_armor_class"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textColor="?attr/custom_icons"/>
                 <!--speed-->
                 <TextView
                     android:layout_width="0dp"
@@ -112,10 +132,9 @@
                     android:layout_weight="1"
                     android:text="15"
                     android:id="@+id/inventory_speed"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
-            <!--blank row-->
-            <TextView style="@style/Blank_Row"/>
             <!--proficiency title-->
             <TextView
                 style="@style/inventory_headers"
@@ -123,69 +142,75 @@
                 android:text="@string/inventory_proficiency"
                 android:clickable="true"
                 android:onClick="proficiencyMagic"
-                android:id="@+id/inventory_proficiency_title"/>
+                android:id="@+id/inventory_proficiency_title"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"
+                android:padding="3dp"/>
             <!--linear layout which holds all the proficiencies-->
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:id="@+id/inventory_proficiencies"
-                android:visibility="gone">
+                android:visibility="gone"
+                android:background="?attr/custom_primary">
                 <!--weapon proficiencies-->
                 <TextView
                     style="@style/inventory_proficiencies"
                     android:text="Weapon Proficiencies:"
-                    android:id="@+id/weapon_proficiencies"/>
-                <!--blank row-->
-                <TextView style="@style/Blank_Row"/>
+                    android:id="@+id/weapon_proficiencies"
+                    android:textColor="?attr/custom_icons"/>
                 <!--armor proficiencies-->
                 <TextView
                     style="@style/inventory_proficiencies"
                     android:text="armor Proficiencies:"
-                    android:id="@+id/armor_proficiencies"/>
-                <!--blank row-->
-                <TextView style="@style/Blank_Row"/>
+                    android:id="@+id/armor_proficiencies"
+                    android:textColor="?attr/custom_icons"/>
                 <!--tool proficiencies-->
                 <TextView
                     style="@style/inventory_proficiencies"
                     android:text="Tool Proficiencies:"
-                    android:id="@+id/tool_proficiencies"/>
-                <!--blank row-->
-                <TextView style="@style/Blank_Row"/>
+                    android:id="@+id/tool_proficiencies"
+                    android:textColor="?attr/custom_icons"/>
                 <!--language proficiencies-->
                 <TextView
                     style="@style/inventory_proficiencies"
                     android:text="Language Proficiencies:"
-                    android:id="@+id/language_proficiencies"/>
-
-
+                    android:id="@+id/language_proficiencies"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
-            <!--blank row-->
-            <TextView style="@style/Blank_Row"/>
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="?attr/custom_primary">
                 <TextView
                     style="@style/inventory_money_title"
-                    android:text="@string/inventory_money_pp"/>
+                    android:text="@string/inventory_money_pp"
+                    android:textColor="?attr/custom_icons"/>
                 <TextView
                     style="@style/inventory_money_title"
-                    android:text="@string/inventory_money_gp"/>
+                    android:text="@string/inventory_money_gp"
+                    android:textColor="?attr/custom_icons"/>
                 <TextView
                     style="@style/inventory_money_title"
-                    android:text="@string/inventory_money_ep"/>
+                    android:text="@string/inventory_money_ep"
+                    android:textColor="?attr/custom_icons"/>
                 <TextView
                     style="@style/inventory_money_title"
-                    android:text="@string/inventory_money_sp"/>
+                    android:text="@string/inventory_money_sp"
+                    android:textColor="?attr/custom_icons"/>
                 <TextView
                     style="@style/inventory_money_title"
-                    android:text="@string/inventory_money_cp"/>
+                    android:text="@string/inventory_money_cp"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="?attr/custom_primary">
                 <EditText
                     style="@style/inventory_money_edits"
                     android:hint="@string/inventory_money_pp"
@@ -207,8 +232,12 @@
                     android:hint="@string/inventory_money_cp"
                     android:id="@+id/inventory_money_cp"/>
             </LinearLayout>
-            <!--blank row-->
-            <TextView style="@style/Blank_Row"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="?attr/custom_divider"/>
+
             <!--add item button-->
             <Button
                 android:layout_width="fill_parent"

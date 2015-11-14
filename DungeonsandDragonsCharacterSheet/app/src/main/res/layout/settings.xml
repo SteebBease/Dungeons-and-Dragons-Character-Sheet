@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_title"
+        android:background="?attr/custom_primary_dark"
+        android:textColor="?attr/custom_icons"
+        android:textSize="25dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/setting_theme"
+            android:layout_gravity="center"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/settings_spinner_color_theme"
+            android:entries="@array/theme_spinner"
+            android:prompt="@string/theme_spinner_prompt">
+        </Spinner>
+    </LinearLayout>
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_button_save"
+            android:id="@+id/settings_button_save"/>
+
+</LinearLayout>

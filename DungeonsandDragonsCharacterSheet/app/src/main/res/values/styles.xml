@@ -59,6 +59,7 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textSize">13sp</item>
+        <item name="android:background">@drawable/button_round</item>
     </style>
     <style name="all_view_character_names">
         <item name="android:layout_width">0dp</item>
@@ -254,4 +255,134 @@
         <item name="android:paddingBottom">20dp</item>
     </style>
 
+    <!-- blue grey colors -->
+    <color name="cs1primary">#03A9F4</color>
+    <color name="cs1primary_dark">#0288D1</color>
+    <color name="cs1primary_light">#B3E5FC</color>
+    <color name="cs1accent">#9E9E9E</color>
+    <color name="cs1primary_text">#212121</color>
+    <color name="cs1secondary_text">#727272</color>
+    <color name="cs1icons">#FFFFFF</color>
+    <color name="cs1divider">#B6B6B6</color>
+    <color name="white">#ffffff</color>
+
+    <!-- red blue colors -->
+    <color name="cs2primary">#F44336</color>
+    <color name="cs2primary_dark">#D32F2F</color>
+    <color name="cs2primary_light">#FFCDD2</color>
+    <color name="cs2accent">#536DFE</color>
+    <color name="cs2primary_text">#212121</color>
+    <color name="cs2secondary_text">#727272</color>
+    <color name="cs2icons">#FFFFFF</color>
+    <color name="cs2divider">#B6B6B6</color>
+
+    <!-- green orange colors -->
+    <color name="cs3primary">#4CAF50</color>
+    <color name="cs3primary_dark">#388E3C</color>
+    <color name="cs3primary_light">#C8E6C9</color>
+    <color name="cs3accent">#FF9800</color>
+    <color name="cs3primary_text">#212121</color>
+    <color name="cs3secondary_text">#727272</color>
+    <color name="cs3icons">#FFFFFF</color>
+    <color name="cs3divider">#B6B6B6</color>
+
+    <!-- yellow red colors-->
+    <color name="cs4primary">#FFC107</color>
+    <color name="cs4primary_dark">#FFA000</color>
+    <color name="cs4primary_light">#FFECB3</color>
+    <color name="cs4accent">#FF5252</color>
+    <color name="cs4primary_text">#212121</color>
+    <color name="cs4secondary_text">#727272</color>
+    <color name="cs4icons">#212121</color>
+    <color name="cs4divider">#B6B6B6</color>
+
+
+    <declare-styleable name="AppTheme">
+        <attr name="custom_primary" format="color"></attr>
+        <attr name="custom_primary_dark" format="color"></attr>
+        <attr name="custom_primary_light" format="color"></attr>
+        <attr name="custom_accent" format="color"></attr>
+        <attr name="custom_primary_text" format="color"></attr>
+        <attr name="custom_secondary_text" format="color"></attr>
+        <attr name="custom_icons" format="color"></attr>
+        <attr name="custom_divider" format="color"></attr>
+        <attr name="custom_white" format="color"></attr>
+
+        <attr name="custom_title" format="reference"></attr>
+
+    </declare-styleable>
+
+    <style name="blue_grey_theme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="custom_primary">@color/cs1primary</item>
+        <item name="custom_primary_dark">@color/cs1primary_dark</item>
+        <item name="custom_primary_light">@color/cs1primary_light</item>
+        <item name="custom_accent">@color/cs1accent</item>
+        <item name="custom_primary_text">@color/cs1primary_text</item>
+        <item name="custom_secondary_text">@color/cs1secondary_text</item>
+        <item name="custom_icons">@color/cs1icons</item>
+        <item name="custom_divider">@color/cs1divider</item>
+        <item name="custom_white">@color/white</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
+    <style name="red_blue_theme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="custom_primary">@color/cs2primary</item>
+        <item name="custom_primary_dark">@color/cs2primary_dark</item>
+        <item name="custom_primary_light">@color/cs2primary_light</item>
+        <item name="custom_accent">@color/cs2accent</item>
+        <item name="custom_primary_text">@color/cs2primary_text</item>
+        <item name="custom_secondary_text">@color/cs2secondary_text</item>
+        <item name="custom_icons">@color/cs2icons</item>
+        <item name="custom_divider">@color/cs2divider</item>
+        <item name="custom_white">@color/white</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
+    <style name="green_orange_theme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="custom_primary">@color/cs3primary</item>
+        <item name="custom_primary_dark">@color/cs3primary_dark</item>
+        <item name="custom_primary_light">@color/cs3primary_light</item>
+        <item name="custom_accent">@color/cs3accent</item>
+        <item name="custom_primary_text">@color/cs3primary_text</item>
+        <item name="custom_secondary_text">@color/cs3secondary_text</item>
+        <item name="custom_icons">@color/cs3icons</item>
+        <item name="custom_divider">@color/cs3divider</item>
+        <item name="custom_white">@color/white</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
+    <style name="yellow_red_theme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="custom_primary">@color/cs4primary</item>
+        <item name="custom_primary_dark">@color/cs4primary_dark</item>
+        <item name="custom_primary_light">@color/cs4primary_light</item>
+        <item name="custom_accent">@color/cs4accent</item>
+        <item name="custom_primary_text">@color/cs4primary_text</item>
+        <item name="custom_secondary_text">@color/cs4secondary_text</item>
+        <item name="custom_icons">@color/cs4icons</item>
+        <item name="custom_divider">@color/cs4divider</item>
+        <item name="custom_white">@color/white</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
+    <style name="parchment" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="custom_primary">#00000000</item>
+        <item name="custom_primary_dark">#00000000</item>
+        <item name="custom_primary_light">#00000000</item>
+        <item name="custom_primary_text">@color/cs4primary_text</item>
+        <item name="custom_secondary_text">@color/cs4secondary_text</item>
+        <item name="custom_icons">@color/cs4icons</item>
+        <item name="custom_divider">#00000000</item>
+        <item name="custom_white">@color/white</item>
+
+        <item name="android:windowBackground">@drawable/fuzzy_tile</item>
+
+    </style>
 </resources>

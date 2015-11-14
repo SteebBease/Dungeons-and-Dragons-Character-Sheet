@@ -3,13 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".BasicStats"
-    android:orientation="vertical"
-    android:background="@drawable/backrepeat">
+    android:orientation="vertical">
     <!--linear layout for all-->
     <LinearLayout
         android:layout_width="fill_parent"
@@ -20,19 +15,26 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:background="?attr/custom_primary_dark">
             <!--Character Name-->
             <TextView
                 style="@style/all_view_character_names"
                 android:text="Character Name"
-                android:id="@+id/character_name"/>
+                android:id="@+id/character_name"
+                android:textColor="?attr/custom_icons"/>
             <!--negative button-->
             <Button
-                style="@style/all_view_hp_buttons"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="-"
                 android:onClick="hpDown"
                 android:textSize="15dp"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:background="@drawable/button_round" />
             <!--hp-->
             <TextView
                 android:layout_width="0dp"
@@ -43,79 +45,102 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:id="@+id/character_hp"
+                android:onClick="HPModify"
                 android:clickable="true"
-                android:onClick="HPModify"/>
+                android:textColor="?attr/custom_icons"/>
             <!--positive button-->
             <Button
-                style="@style/all_view_hp_buttons"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:text="+"
                 android:onClick="hpUp"
                 android:textSize="15dp"
-                android:clickable="true"/>
+                android:clickable="true"
+                android:background="@drawable/button_round"/>
         </LinearLayout>
     </LinearLayout>
-    <!--blank row-->
-    <TextView style="@style/Blank_Row"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="?attr/custom_divider"/>
+    
     <!--spell titles-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/spell_attack_titles">
+        android:id="@+id/spell_attack_titles"
+        android:background="?attr/custom_primary">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/spell_casting_ability"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/spell_save_dc"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/spell_attack_bonus"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
     </LinearLayout>
     <!--spell data-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/spell_attack_data">
+        android:id="@+id/spell_attack_data"
+        android:background="?attr/custom_primary">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Intelligence"
             android:gravity="center"
-            android:id="@+id/spell_casting_ability"/>
+            android:id="@+id/spell_casting_ability"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="15"
             android:gravity="center"
-            android:id="@+id/spell_save_dc"/>
+            android:id="@+id/spell_save_dc"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="+5"
             android:gravity="center"
-            android:id="@+id/spell_attack_bonus"/>
+            android:id="@+id/spell_attack_bonus"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
     </LinearLayout>
-    <!--blank row-->
-    <TextView style="@style/Blank_Row"/>
+    
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/spell_casting_title_linear_layout">
+        android:id="@+id/spell_casting_title_linear_layout"
+        android:background="?attr/custom_primary">
         <!--spell casting title-->
         <TextView
             style="@style/spell_casting_headers"
@@ -123,14 +148,18 @@
             android:layout_weight="7"
             android:text="@string/spell_spellcasting"
             android:clickable="true"
-            android:onClick="spellCastingMagic"/>
+            android:onClick="spellCastingMagic"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/spell_reset"
             android:clickable="true"
-            android:onClick="resetSpells"/>
+            android:onClick="resetSpells"
+            android:background="?attr/custom_primary"
+            android:textColor="?attr/custom_icons"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
@@ -139,7 +168,8 @@
         android:layout_gravity="center"
         android:gravity="center_vertical"
         android:id="@+id/spell_casting_linear_layout"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:background="?attr/custom_primary">
         <!--spells 1-3 titles -->
         <LinearLayout
             android:layout_width="fill_parent"
@@ -152,41 +182,54 @@
                 android:text="@string/spell_level_1"
                 android:tag="1"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_1T"/>
+                android:id="@+id/spell_level_1T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_2"
                 android:tag="2"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_2T"/>
+                android:id="@+id/spell_level_2T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_3"
                 android:tag="3"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_3T"/>
+                android:id="@+id/spell_level_3T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:background="?attr/custom_primary">
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_1"
                 android:id="@+id/spell_level_1"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_2"
                 android:id="@+id/spell_level_2"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_3"
                 android:id="@+id/spell_level_3"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
         </LinearLayout>
 
         <!--spells 4-6 titles -->
@@ -195,47 +238,61 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:background="?attr/custom_primary">
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_4"
                 android:tag="4"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_4T"/>
+                android:id="@+id/spell_level_4T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_5"
                 android:tag="5"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_5T"/>
+                android:id="@+id/spell_level_5T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_6"
                 android:tag="6"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_6T"/>
+                android:id="@+id/spell_level_6T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:background="?attr/custom_primary">
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_4"
                 android:id="@+id/spell_level_4"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_5"
                 android:id="@+id/spell_level_5"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_6"
                 android:id="@+id/spell_level_6"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
         </LinearLayout>
         <!--spells 7-9 titles -->
         <LinearLayout
@@ -243,51 +300,69 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:background="?attr/custom_primary">
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_7"
                 android:tag="7"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_7T"/>
+                android:id="@+id/spell_level_7T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_8"
                 android:tag="8"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_8T"/>
+                android:id="@+id/spell_level_8T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_9"
                 android:tag="9"
                 android:onClick="spellCasting"
-                android:id="@+id/spell_level_9T"/>
+                android:id="@+id/spell_level_9T"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:background="?attr/custom_primary">
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_7"
                 android:id="@+id/spell_level_7"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_8"
                 android:id="@+id/spell_level_8"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
             <TextView
                 style="@style/spell_casting_titles"
                 android:text="@string/spell_level_9"
                 android:id="@+id/spell_level_9"
-                android:onClick="spellCasting"/>
+                android:onClick="spellCasting"
+                android:background="?attr/custom_primary"
+                android:textColor="?attr/custom_icons"/>
         </LinearLayout>
     </LinearLayout>
-    <!--blank row-->
-    <TextView style="@style/Blank_Row"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="?attr/custom_divider"/>
+    
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

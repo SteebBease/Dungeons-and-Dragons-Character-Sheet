@@ -21,6 +21,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -39,6 +40,10 @@ public class BasicStats extends MenuAndDatabase{
     //test
     //Constructor for the activity. This populates various textviews on the page
     public void onCreate(Bundle savedInstanceState){
+        //sets the theme from settings
+        int chosenTheme = PreferenceManager.getDefaultSharedPreferences(this).getInt("theme",R.style.blue_grey_theme);
+        setTheme(chosenTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.basic_stats);
 

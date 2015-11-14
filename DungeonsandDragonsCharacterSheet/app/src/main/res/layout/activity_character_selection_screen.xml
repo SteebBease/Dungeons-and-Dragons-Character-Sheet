@@ -3,35 +3,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".CharacterSelectionScreen"
-    android:orientation="vertical"
-    android:background="@drawable/backrepeat">
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/char_selection_screen_char_selection"
+        android:textColor="?attr/custom_icons"
+        android:gravity="center_horizontal"
+        android:background="?attr/custom_primary_dark"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="?attr/custom_divider"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/char_selection_screen_instructions"
         android:gravity="center"
-        android:id="@+id/title_character"/>
+        android:id="@+id/title_character"
+        android:background="?attr/custom_primary"
+        android:textColor="?attr/custom_icons"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="?attr/custom_divider"/>
+
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Import/Export (Experimental)"
         android:id="@+id/button_export"/>
-    <Button
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/char_selection_screen_new_character"
-        android:id="@+id/button_new_character"
-        /><!--android:onClick="newCharacterButton"-->
-    <TextView
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="@string/char_selection_screen_new_character"
+            android:id="@+id/button_new_character"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/settings"
+            android:id="@+id/button_settings"/>
+    </LinearLayout>
+    <Space
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""/>
+        android:layout_height="wrap_content"/>
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

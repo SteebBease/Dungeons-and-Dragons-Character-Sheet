@@ -12,6 +12,7 @@
     <string name="setting">Settings</string>
 
     <!--Character Selection Screen-->
+    <string name="char_selection_screen_char_selection">Character Selection</string>"
     <string name="char_selection_screen_new_character">New Character</string>
     <string name="char_selection_screen_instructions">Create a new character by pressing the button,
             select your character from below to play them. Long press a character to edit or delete them.</string>
@@ -184,4 +185,19 @@
     <string name="ie_export_text">Note: when exporting it will overwrite any existing files.</string>
     <string name="ie_spinner_title_import">Character Import</string>
     <string name="ie_import">Import</string>
+
+    <!-- Settings -->
+    <string name="setting_title">Settings</string>
+    <string name="setting_theme">Color Theme</string>
+    <string name="theme_spinner_prompt">Select Theme</string>
+    <string name="settings_button_save">Save Settings</string>
+
+    <string-array name="theme_spinner">
+        <item>Select Theme</item>
+        <item>Original Parchment</item>
+        <item>Blue/Grey Theme</item>
+        <item>Red/Blue Theme</item>
+        <item>Green/Orange Theme</item>
+        <item>Yellow/Red Theme</item>
+    </string-array>
 </resources>

@@ -14,6 +14,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -40,6 +41,10 @@ public class Backstory extends MenuAndDatabase {
     int imageHeight;
 
     public void onCreate(Bundle savedInstanceState){
+        //sets the theme from settings
+        int chosenTheme = PreferenceManager.getDefaultSharedPreferences(this).getInt("theme",R.style.blue_grey_theme);
+        setTheme(chosenTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.back_story);
 

@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
@@ -39,6 +40,10 @@ public class ImportExport extends Activity{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //sets the theme from settings
+        int chosenTheme = PreferenceManager.getDefaultSharedPreferences(this).getInt("theme",R.style.blue_grey_theme);
+        setTheme(chosenTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.import_export);
 
