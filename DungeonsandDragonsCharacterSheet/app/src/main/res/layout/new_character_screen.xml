@@ -11,6 +11,16 @@
     android:orientation="vertical"
     android:background="?attr/custom_primary">
 
+    <!--Character Name-->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:inputType="textCapWords"
+        android:hint="@string/new_char_screen_char_name"
+        android:id="@+id/new_char_char_name"/>
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -18,21 +28,11 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/character_information_scroll_view">
 
-            <!--blank row-->
-            <TextView style="@style/Blank_Row"/>
-            <!--Character Name-->
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="25sp"
-                android:inputType="textCapWords"
-                android:hint="@string/new_char_screen_char_name"
-                android:id="@+id/new_char_char_name"/>
-            <!--blank row-->
-            <TextView style="@style/Blank_Row"/>            <!--HP, Speed Layout-->
+            <!--HP, Speed Layout-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
                 <!--HP-->
                 <EditText

@@ -205,6 +205,10 @@ public class MenuAndDatabase extends Activity implements OnGestureListener{
             charLevelWizard = " Wizard:" + dataPointer.getString(dataPointer.getColumnIndex(SQLHelper.CHARACTER_WIZARD));
         }
         classString = charLevelBarbarian + charLevelBard + charLevelCleric + charLevelDruid + charLevelFighter + charLevelMonk + charLevelPaladin + charLevelRanger + charLevelRogue + charLevelSorcerer + charLevelWarlock + charLevelWizard;
+
+        if(classString.length()<1){
+            classString = "No Class Levels Selected";
+        }
         Log.i("MenuAndDatabase","classLevelString complete. Return Value: " + classString);
         return classString;
     }

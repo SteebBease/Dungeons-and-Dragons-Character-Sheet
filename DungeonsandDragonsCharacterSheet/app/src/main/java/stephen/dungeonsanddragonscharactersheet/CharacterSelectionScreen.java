@@ -35,6 +35,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewDebug;
@@ -49,6 +51,7 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -354,7 +357,37 @@ public class CharacterSelectionScreen extends Activity {
             positiveButtonText = "Save";
             addModifyCharacterDialog.setTitle("Save Character");
         }
-        
+
+        //decides whether to show the character information or not. Only shows information if the
+        //character name field has something in it
+        final LinearLayout charInfo = (LinearLayout) inflaterView.findViewById(R.id.character_information_scroll_view);
+        charInfo.setVisibility(View.VISIBLE);
+        if (charname.length() == 0){
+            charInfo.setVisibility(View.GONE);
+        }
+        charname.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charname.length() > 0){
+                    charInfo.setVisibility(View.VISIBLE);
+                }
+                else {
+                    charInfo.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
         //populates the text boxes if they are being modified.
         if (modify == 1){
             charname.setText(characterCursor.getString(characterCursor.getColumnIndex(SQLHelper.CHARACTER_NAME)));
@@ -578,17 +611,11 @@ public class CharacterSelectionScreen extends Activity {
 
     public void saveCharacterInformation(int modify, SQLiteDatabase characterDB, String characterID){
         //This requires some Validation in here!!!
-        if (charname.length() == 0){
-            Toast.makeText(CharacterSelectionScreen.this,"Your character needs a name",Toast.LENGTH_SHORT).show();
-            return;
-        }
         if (charhp.length() == 0){
-            Toast.makeText(CharacterSelectionScreen.this,"Your character needs HP",Toast.LENGTH_SHORT).show();
-            return;
+            charhp.setText("0");
         }
         if (charspeed.length() == 0){
-            Toast.makeText(CharacterSelectionScreen.this,"Your character needs a speed",Toast.LENGTH_SHORT).show();
-            return;
+            charspeed.setText("0");
         }
         if ((charstr.length() == 0) ||
                 (chardex.length() == 0) ||
@@ -596,23 +623,12 @@ public class CharacterSelectionScreen extends Activity {
                 (charint.length() == 0) ||
                 (charwis.length() == 0) ||
                 (charcha.length() == 0)){
-            Toast.makeText(CharacterSelectionScreen.this,"Your character needs some stats",Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if ((charbarbarianlvl.length() > 0) &&
-                (charbardlvl.length() > 0) &&
-                (charclericlvl.length() > 0) &&
-                (chardruidlvl.length() > 0) &&
-                (charfighterlvl.length() > 0) &&
-                (charmonklvl.length() > 0) &&
-                (charpaladinlvl.length() > 0) &&
-                (charrangerlvl.length() > 0) &&
-                (charroguelvl.length() > 0) &&
-                (charsorcerer.length() > 0) &&
-                (charwarlocklvl.length() > 0) &&
-                (charwizardlvl.length() > 0)){
-            Toast.makeText(CharacterSelectionScreen.this,"Your character needs a level",Toast.LENGTH_SHORT).show();
-            return;
+            charstr.setText("0");
+            chardex.setText("0");
+            charcon.setText("0");
+            charint.setText("0");
+            charwis.setText("0");
+            charcha.setText("0");
         }
         ContentValues characterCV = new ContentValues();
 
