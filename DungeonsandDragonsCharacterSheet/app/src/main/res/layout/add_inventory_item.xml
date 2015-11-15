@@ -4,31 +4,33 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/add_a_weapon_linear_layout">
+    android:id="@+id/add_a_weapon_linear_layout"
+    android:background="?attr/custom_icons">
 
     <RadioGroup
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add_item_radio_group"
         android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:gravity="center_horizontal"
+        android:background="?attr/custom_primary_dark">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/item_add_weapon"
-            android:textColor="#ffffff"
+            android:textColor="?attr/custom_icons"
             android:id="@+id/radio_group_weapon"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/item_add_armor"
-            android:textColor="#ffffff"
+            android:textColor="?attr/custom_icons"
             android:id="@+id/radio_group_armor"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/item_add_item"
-            android:textColor="#ffffff"
+            android:textColor="?attr/custom_icons"
             android:id="@+id/radio_group_item"/>
     </RadioGroup>
 
@@ -124,15 +126,16 @@
             android:orientation="horizontal"
             android:gravity="center">
             <RadioGroup
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="?attr/custom_primary_dark">
                 <RadioButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/item_add_strength"
-                    android:textColor="#ffffff"
+                    android:textColor="?attr/custom_icons"
                     android:gravity="center"
                     android:id="@+id/item_radio_strength"/>
                 <RadioButton
@@ -140,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/item_add_dexterity"
-                    android:textColor="#ffffff"
+                    android:textColor="?attr/custom_icons"
                     android:gravity="center"
                     android:id="@+id/item_radio_dexterity"/>
             </RadioGroup>

@@ -16,14 +16,18 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:gravity="center_vertical"
                     android:padding="5dp"
                     android:background="?attr/custom_primary_dark">
                     <!--Character Name-->
                     <TextView
-                        style="@style/all_view_character_names"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="25sp"
+                        android:gravity="center"
                         android:text="Character Name"
                         android:id="@+id/character_name"
                         android:textColor="?attr/custom_icons"/>
@@ -84,15 +88,18 @@
                 <!--race-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_race"/>
+                    android:text="@string/new_char_screen_race"
+                    android:textStyle="bold"/>
                 <!--alignment-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_alignment"/>
+                    android:text="@string/new_char_screen_alignment"
+                    android:textStyle="bold"/>
                 <!--background-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_background"/>
+                    android:text="@string/new_char_screen_background"
+                    android:textStyle="bold"/>
             </LinearLayout>
             <!--race, alignment, background data-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -118,15 +125,18 @@
                 <!--eye-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_eye_color"/>
+                    android:text="@string/new_char_screen_eye_color"
+                    android:textStyle="bold"/>
                 <!--skin-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_skin_color"/>
+                    android:text="@string/new_char_screen_skin_color"
+                    android:textStyle="bold"/>
                 <!--hair color-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_hair_color"/>
+                    android:text="@string/new_char_screen_hair_color"
+                    android:textStyle="bold"/>
             </LinearLayout>
             <!--character information eye, skin, hair data-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -151,15 +161,18 @@
                 <!--age-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_age"/>
+                    android:text="@string/new_char_screen_age"
+                    android:textStyle="bold"/>
                 <!--height-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_height"/>
+                    android:text="@string/new_char_screen_height"
+                    android:textStyle="bold"/>
                 <!--weight-->
                 <TextView
                     style="@style/backstory_headers_multi"
-                    android:text="@string/new_char_screen_weight"/>
+                    android:text="@string/new_char_screen_weight"
+                    android:textStyle="bold"/>
             </LinearLayout>
             <!--character information age, height, weight data-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -184,7 +197,8 @@
             <!--allies and organisations header-->
             <TextView
                 style="@style/backstory_headers_single"
-                android:text="@string/new_char_screen_allies_and_organisations"/>
+                android:text="@string/new_char_screen_allies_and_organisations"
+                android:textStyle="bold"/>
             <!--allies and organisations data-->
             <TextView
                 style="@style/backstory_data_single"
@@ -193,7 +207,8 @@
             <!--personality traits header-->
             <TextView
                 style="@style/backstory_headers_single"
-                android:text="@string/new_char_screen_personality_traits"/>
+                android:text="@string/new_char_screen_personality_traits"
+                android:textStyle="bold"/>
             <!--personality traits data-->
             <TextView
                 style="@style/backstory_data_single"
@@ -202,7 +217,8 @@
             <!--ideals header-->
             <TextView
                 style="@style/backstory_headers_single"
-                android:text="@string/new_char_screen_ideals"/>
+                android:text="@string/new_char_screen_ideals"
+                android:textStyle="bold"/>
             <!--ideals data-->
             <TextView
                 style="@style/backstory_data_single"
@@ -211,7 +227,8 @@
             <!--bonds header-->
             <TextView
                 style="@style/backstory_headers_single"
-                android:text="@string/new_char_screen_bonds"/>
+                android:text="@string/new_char_screen_bonds"
+                android:textStyle="bold"/>
             <!--bonds data-->
             <TextView
                 style="@style/backstory_data_single"
@@ -220,7 +237,8 @@
             <!--flaws header-->
             <TextView
                 style="@style/backstory_headers_single"
-                android:text="@string/new_char_screen_flaws"/>
+                android:text="@string/new_char_screen_flaws"
+                android:textStyle="bold"/>
             <!--flaws data-->
             <TextView
                 style="@style/backstory_data_single"
@@ -229,7 +247,8 @@
             <!--backstory header-->
             <TextView
                 style="@style/backstory_headers_single"
-                android:text="@string/new_char_screen_backstory"/>
+                android:text="@string/new_char_screen_backstory"
+                android:textStyle="bold"/>
             <!--backstory data-->
             <TextView
                 style="@style/backstory_data_single"

@@ -7,25 +7,27 @@
     <RadioGroup
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="?attr/custom_primary_dark">
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Ability"
-            android:textColor="#ffffff"
+            android:text="Ability"
+            android:textColor="?attr/custom_icons"
             android:id="@+id/spell_ability"/>
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Spell"
-            android:textColor="#ffffff"
+            android:text="Spell"
+            android:textColor="?attr/custom_icons"
             android:id="@+id/spell_spell"/>
     </RadioGroup>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?attr/custom_icons">
         <EditText
             style="@style/spell_edit_box"
             android:hint="Name"
@@ -45,7 +47,8 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?attr/custom_icons">
         <EditText
             style="@style/spell_edit_box"
             android:hint="Casting Time"
@@ -62,9 +65,14 @@
             android:layout_weight="1"
             android:id="@+id/spell_duration"/>
     </LinearLayout>
-    <EditText
-        style="@style/spell_edit_box"
-        android:hint="Description"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:id="@+id/spell_description"/>
+        android:layout_height="wrap_content"
+        android:background="?attr/custom_icons">
+        <EditText
+            style="@style/spell_edit_box"
+            android:hint="Description"
+            android:layout_width="fill_parent"
+            android:id="@+id/spell_description"/>
+    </LinearLayout>
 </LinearLayout>

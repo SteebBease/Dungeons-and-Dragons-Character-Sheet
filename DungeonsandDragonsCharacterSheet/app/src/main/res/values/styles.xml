@@ -312,6 +312,7 @@
 
     </declare-styleable>
 
+    //Blue grey theme
     <style name="blue_grey_theme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
         <item name="custom_primary">@color/cs1primary</item>
         <item name="custom_primary_dark">@color/cs1primary_dark</item>
@@ -372,17 +373,17 @@
 
     </style>
 
+    //original parchment style
     <style name="parchment" parent="android:Theme.Light.NoTitleBar.Fullscreen">
-        <item name="custom_primary">#00000000</item>
-        <item name="custom_primary_dark">#00000000</item>
-        <item name="custom_primary_light">#00000000</item>
+        <item name="custom_primary">@drawable/backrepeat</item>
+        <item name="custom_primary_dark">@drawable/backrepeat</item>
+        <item name="custom_primary_light">@drawable/backrepeat</item>
         <item name="custom_primary_text">@color/cs4primary_text</item>
         <item name="custom_secondary_text">@color/cs4secondary_text</item>
         <item name="custom_icons">@color/cs4icons</item>
-        <item name="custom_divider">#00000000</item>
+        <item name="custom_divider">#66994C00</item>
         <item name="custom_white">@color/white</item>
-
-        <item name="android:windowBackground">@drawable/fuzzy_tile</item>
+        <item name="android:windowBackground">@drawable/backrepeat</item>
 
     </style>
 </resources>

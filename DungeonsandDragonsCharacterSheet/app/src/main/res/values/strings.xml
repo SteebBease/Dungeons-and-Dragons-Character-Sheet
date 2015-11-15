@@ -115,11 +115,14 @@
     <string name="basic_stats_stealth">Stealth</string>
     <string name="basic_stats_survival">Survival</string>
     <string name="basic_stats_experience">XP</string>
+
+    <!-- hp dialog -->
     <string name="HP_dialog_D6">D6</string>
     <string name="HP_dialog_D8">D8</string>
     <string name="HP_dialog_D10">D10</string>
     <string name="HP_dialog_D12">D12</string>
     <string name="HP_hit_dice">Hit Dice</string>
+    <string name="hp_dialog_title">Hit Points</string>
 
     <!--inventory-->
     <string name="inventory_weapons">Weapons</string>
@@ -200,4 +203,5 @@
         <item>Green/Orange Theme</item>
         <item>Yellow/Red Theme</item>
     </string-array>
+
 </resources>

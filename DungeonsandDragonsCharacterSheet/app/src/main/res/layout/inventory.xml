@@ -16,14 +16,18 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:padding="5dp"
                 android:background="?attr/custom_primary_dark">
                 <!--Character Name-->
                 <TextView
-                    style="@style/all_view_character_names"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:textSize="25sp"
+                    android:gravity="center"
                     android:text="Character Name"
                     android:id="@+id/character_name"
                     android:textColor="?attr/custom_icons"/>
@@ -73,7 +77,7 @@
             <!--speed and initiative-->
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:orientation="horizontal"
                 android:background="?attr/custom_primary">
                 <!--initiative-->
@@ -83,7 +87,8 @@
                     android:layout_weight="1"
                     android:text="@string/inventory_initiative"
                     android:gravity="center"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
                 <!--armor class-->
                 <TextView
                     android:layout_width="0dp"
@@ -91,7 +96,8 @@
                     android:layout_weight="1"
                     android:text="@string/inventory_armor_class"
                     android:gravity="center"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
                 <!--speed-->
                 <TextView
                     android:layout_width="0dp"
@@ -99,12 +105,13 @@
                     android:layout_weight="1"
                     android:text="@string/inventory_speed"
                     android:gravity="center"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
             </LinearLayout>
             <!--speed and initiative-->
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:orientation="horizontal"
                 android:background="?attr/custom_primary">
                 <!--initiative-->
@@ -137,8 +144,10 @@
             </LinearLayout>
             <!--proficiency title-->
             <TextView
-                style="@style/inventory_headers"
+                android:layout_height="40dp"
                 android:layout_width="fill_parent"
+                android:gravity="center"
+                android:textSize="25dp"
                 android:text="@string/inventory_proficiency"
                 android:clickable="true"
                 android:onClick="proficiencyMagic"
@@ -182,33 +191,38 @@
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:orientation="horizontal"
                 android:background="?attr/custom_primary">
                 <TextView
                     style="@style/inventory_money_title"
                     android:text="@string/inventory_money_pp"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
                 <TextView
                     style="@style/inventory_money_title"
                     android:text="@string/inventory_money_gp"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
                 <TextView
                     style="@style/inventory_money_title"
                     android:text="@string/inventory_money_ep"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
                 <TextView
                     style="@style/inventory_money_title"
                     android:text="@string/inventory_money_sp"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
                 <TextView
                     style="@style/inventory_money_title"
                     android:text="@string/inventory_money_cp"
-                    android:textColor="?attr/custom_icons"/>
+                    android:textColor="?attr/custom_icons"
+                    android:textStyle="bold"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:background="?attr/custom_primary">
                 <EditText

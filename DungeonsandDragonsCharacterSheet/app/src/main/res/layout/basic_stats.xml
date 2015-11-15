@@ -16,14 +16,18 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:padding="5dp"
                 android:background="?attr/custom_primary_dark">
                 <!--Character Name-->
                 <TextView
-                    style="@style/all_view_character_names"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:textSize="25sp"
+                    android:gravity="center"
                     android:text="Character Name"
                     android:id="@+id/character_name"
                     android:textColor="?attr/custom_icons"/>
@@ -72,22 +76,18 @@
                     android:layout_height="1dp"
                     android:background="?attr/custom_divider"/>
             </LinearLayout>
-            <TextView style="@style/Blank_Row"
-                android:background="?attr/custom_primary"/>
+
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:textSize="25sp"
                 android:text="Class Levels"
                 android:gravity="center"
                 android:id="@+id/character_class_levels"
                 android:background="?attr/custom_primary"
                 android:textColor="?attr/custom_icons"/>
-            <!--blank row-->
-            <TextView style="@style/Blank_Row"
-                android:background="?attr/custom_primary"/>
-            <!---->
 
+            <!---->
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">

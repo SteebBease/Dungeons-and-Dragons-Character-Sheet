@@ -816,4 +816,17 @@ public class CharacterSelectionScreen extends Activity {
             cursor.close();
         }
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        //required for when the back button is pressed to return to the character select screen
+        //to ensure the theme is correct. If the user changes the theme then the back button
+        //will restart the previous theme.
+        Intent i = getIntent();
+        finish();
+        startActivity(i);
+
+    }
 }

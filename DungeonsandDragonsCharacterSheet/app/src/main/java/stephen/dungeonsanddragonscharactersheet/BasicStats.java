@@ -411,7 +411,6 @@ public class BasicStats extends MenuAndDatabase{
         //sets up the custom dialog view
         final View inflaterView = getLayoutInflater().inflate(R.layout.hp_dialog, null);
         final AlertDialog.Builder hpDialog = new AlertDialog.Builder(this);
-        hpDialog.setTitle("Hit Points");
         hpDialog.setView(inflaterView);
         hpDialog.setNeutralButton(android.R.string.ok,new DialogInterface.OnClickListener() {
             @Override

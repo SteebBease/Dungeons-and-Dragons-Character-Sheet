@@ -5,7 +5,8 @@
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
         android:text="@string/setting_title"
         android:background="?attr/custom_primary_dark"
         android:textColor="?attr/custom_icons"

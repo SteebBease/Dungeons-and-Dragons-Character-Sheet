@@ -9,7 +9,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".NewCharacterScreen"
     android:orientation="vertical"
-    android:background="@drawable/backrepeat">
+    android:background="?attr/custom_primary">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -93,7 +93,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/new_char_screen_class_levels"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/custom_icons"/>
             <!--class levels. barbarian, bard, cleric-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
                 <!--barbarian-->
@@ -173,24 +174,28 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/new_char_screen_saving_throw_proficiencies"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/custom_icons"/>
             <!--saving throw proficiencies strength, dexterity, constitution-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
                 <!--strength-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_strength"
-                    android:id="@+id/new_char_saving_throw_strength"/>
+                    android:id="@+id/new_char_saving_throw_strength"
+                    android:textColor="?attr/custom_icons"/>
                 <!--dexterity-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_dexterity"
-                    android:id="@+id/new_char_saving_throw_dexterity"/>
+                    android:id="@+id/new_char_saving_throw_dexterity"
+                    android:textColor="?attr/custom_icons"/>
                 <!--constitution-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_constitution"
-                    android:id="@+id/new_char_saving_throw_constitution"/>
+                    android:id="@+id/new_char_saving_throw_constitution"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--saving throw proficiencies intelligence, wisdom, charisma-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -198,17 +203,20 @@
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_intelligence"
-                    android:id="@+id/new_char_saving_throw_intelligence"/>
+                    android:id="@+id/new_char_saving_throw_intelligence"
+                    android:textColor="?attr/custom_icons"/>
                 <!--wisdom-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_wisdom"
-                    android:id="@+id/new_char_saving_throw_wisdom"/>
+                    android:id="@+id/new_char_saving_throw_wisdom"
+                    android:textColor="?attr/custom_icons"/>
                 <!--charisma-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_charisma"
-                    android:id="@+id/new_char_saving_throw_charisma"/>
+                    android:id="@+id/new_char_saving_throw_charisma"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--blank row-->
             <TextView style="@style/Blank_Row"/>
@@ -217,23 +225,27 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/new_char_screen_skill_proficiencies"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/custom_icons"/>
             <LinearLayout style="@style/Linear_Layout_Horizontal">
                 <!--acrobatics-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_acrobatics"
-                    android:id="@+id/new_char_skill_acrobatics"/>
+                    android:id="@+id/new_char_skill_acrobatics"
+                    android:textColor="?attr/custom_icons"/>
                 <!--animal handling-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_animal_handling"
-                    android:id="@+id/new_char_skill_animal_handling"/>
+                    android:id="@+id/new_char_skill_animal_handling"
+                    android:textColor="?attr/custom_icons"/>
                 <!--arcana-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_arcana"
-                    android:id="@+id/new_char_skill_arcana"/>
+                    android:id="@+id/new_char_skill_arcana"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--Skill Proficiencies athletics, deception history-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -241,17 +253,20 @@
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_athletics"
-                    android:id="@+id/new_char_skill_athletics"/>
+                    android:id="@+id/new_char_skill_athletics"
+                    android:textColor="?attr/custom_icons"/>
                 <!--deception-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_deception"
-                    android:id="@+id/new_char_skill_deception"/>
+                    android:id="@+id/new_char_skill_deception"
+                    android:textColor="?attr/custom_icons"/>
                 <!--history-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_history"
-                    android:id="@+id/new_char_skill_history"/>
+                    android:id="@+id/new_char_skill_history"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--Skill Proficiencies insight, intimidaiton, investigation-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -259,17 +274,20 @@
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_insight"
-                    android:id="@+id/new_char_skill_insight"/>
+                    android:id="@+id/new_char_skill_insight"
+                    android:textColor="?attr/custom_icons"/>
                 <!--intimidaiton-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_intimidation"
-                    android:id="@+id/new_char_skill_intimidation"/>
+                    android:id="@+id/new_char_skill_intimidation"
+                    android:textColor="?attr/custom_icons"/>
                 <!--investigation-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_investigation"
-                    android:id="@+id/new_char_skill_investigation"/>
+                    android:id="@+id/new_char_skill_investigation"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--Skill Proficiencies medicine nature perception-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -277,17 +295,20 @@
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_medicine"
-                    android:id="@+id/new_char_skill_medicine"/>
+                    android:id="@+id/new_char_skill_medicine"
+                    android:textColor="?attr/custom_icons"/>
                 <!--nature-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_nature"
-                    android:id="@+id/new_char_skill_nature"/>
+                    android:id="@+id/new_char_skill_nature"
+                    android:textColor="?attr/custom_icons"/>
                 <!--perception-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_perception"
-                    android:id="@+id/new_char_skill_perception"/>
+                    android:id="@+id/new_char_skill_perception"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--Skill Proficiencies performance, persuasion, religion-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -295,17 +316,20 @@
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_performance"
-                    android:id="@+id/new_char_skill_performance"/>
+                    android:id="@+id/new_char_skill_performance"
+                    android:textColor="?attr/custom_icons"/>
                 <!--persuasion-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_persuasion"
-                    android:id="@+id/new_char_skill_persuasion"/>
+                    android:id="@+id/new_char_skill_persuasion"
+                    android:textColor="?attr/custom_icons"/>
                 <!--religion-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_religion"
-                    android:id="@+id/new_char_skill_religion"/>
+                    android:id="@+id/new_char_skill_religion"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--Skill Proficiencies slight of hand, stealth, survival-->
             <LinearLayout style="@style/Linear_Layout_Horizontal">
@@ -313,17 +337,20 @@
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_slight_of_hand"
-                    android:id="@+id/new_char_skill_slight_of_hand"/>
+                    android:id="@+id/new_char_skill_slight_of_hand"
+                    android:textColor="?attr/custom_icons"/>
                 <!--stealth-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_stealth"
-                    android:id="@+id/new_char_skill_stealth"/>
+                    android:id="@+id/new_char_skill_stealth"
+                    android:textColor="?attr/custom_icons"/>
                 <!--survival-->
                 <CheckBox
                     style="@style/CheckBox_Horizontal"
                     android:text="@string/new_char_screen_skill_survival"
-                    android:id="@+id/new_char_skill_survival"/>
+                    android:id="@+id/new_char_skill_survival"
+                    android:textColor="?attr/custom_icons"/>
             </LinearLayout>
             <!--blank row-->
             <TextView style="@style/Blank_Row"/>            <!--weapon proficiencies-->
@@ -352,7 +379,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/spell_spellcasting_slots"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="?attr/custom_icons"/>
             <LinearLayout
                 style="@style/Linear_Layout_Horizontal">
                 <EditText
