@@ -357,7 +357,7 @@
             <EditText
                 style="@style/Edit_Text_Text_Entry_Single_Width"
                 android:hint="@string/new_char_screen_weapon_proficiencies"
-                android:id="@+id/new_char_weapon_proficiencies"/>
+                android:id="@+id/new_char_weapon_proficiencies" />
             <!--armor proficiencies-->
             <EditText
                 style="@style/Edit_Text_Text_Entry_Single_Width"

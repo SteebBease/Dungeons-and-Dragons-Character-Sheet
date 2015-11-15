@@ -42,6 +42,7 @@ import android.view.View;
 import android.view.ViewDebug;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -373,10 +374,9 @@ public class CharacterSelectionScreen extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charname.length() > 0){
+                if (charname.length() > 0) {
                     charInfo.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     charInfo.setVisibility(View.GONE);
                 }
             }
@@ -588,6 +588,8 @@ public class CharacterSelectionScreen extends Activity {
 
         final AlertDialog addModifyCharacterAlert = addModifyCharacterDialog.create();
         addModifyCharacterAlert.setCanceledOnTouchOutside(false);
+        //sets the screen to resize for data input
+        addModifyCharacterAlert.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         addModifyCharacterAlert.show();
 
         Button cancelButton = addModifyCharacterAlert.getButton(DialogInterface.BUTTON_NEGATIVE);
